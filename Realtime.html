@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-time Input Capture</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #inputField {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    #displayArea {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Real-time Input Capture</h2>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <div id="displayArea"></div>
+
+    <script>
+        // Get references to input field and display area
+        const inputField = document.getElementById('inputField');
+        const displayArea = document.getElementById('displayArea');
+
+        // Function to update display area with current input value
+        function updateDisplay() {
+            displayArea.textContent = inputField.value;
+        }
+
+        // Attach input event listener to input field
+        inputField.addEventListener('input', updateDisplay);
+    </script>
+</body>
+</html>
